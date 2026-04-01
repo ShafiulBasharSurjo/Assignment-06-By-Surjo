@@ -1,13 +1,25 @@
+import React, { Suspense } from "react";
 import "./App.css";
 import Hero from "./Componenets/HeroSection/Hero";
 import Navbar from "./Componenets/Navbar/Navbar";
-import Card from "./Componenets/Card/Card";
+import Tools from "./Componenets/Tools/Tools";
+
+const fetchData = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+};
+
 function App() {
+  const dataPromise = fetchData();
   return (
     <>
       <Navbar />
       <Hero />
-      <Card />
+      <Suspense
+        fallback={<span className="loading loading-ring loading-lg"></span>}
+      >
+        <Tools dataPromise={dataPromise} />
+      </Suspense>
     </>
   );
 }
