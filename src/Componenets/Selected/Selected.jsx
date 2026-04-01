@@ -2,15 +2,18 @@ import React from "react";
 import cartimg from "../../../assets/products/shopping-cart.png";
 import { FaUserSecret } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Selected = ({ cartItems = [], setCartItems }) => {
   const handleDelete = (item) => {
+    toast.error(`${item.title} removed from cart!`);
     const filtered = cartItems.filter((c) => c.id !== item.id);
     setCartItems(filtered);
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
   const handleClearout = () => {
+    toast.success(`Checkout successful! Total: $${totalPrice.toFixed(2)}`);
     setCartItems([]);
   };
 

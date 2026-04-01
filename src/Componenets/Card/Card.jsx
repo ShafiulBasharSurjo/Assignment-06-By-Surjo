@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ dataPromise, setCartItems }) => {
   const [selectedItems, setSelectedItems] = useState([false]);
   const handleAddToCart = () => {
+    toast.success(`${dataPromise.title} added to cart!`);
     setCartItems((prev) => [...prev, dataPromise]);
     setSelectedItems(true);
   };
