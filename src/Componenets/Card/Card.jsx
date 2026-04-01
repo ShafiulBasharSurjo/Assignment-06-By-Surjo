@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const Card = ({ dataPromise, cartItems, setCartItems }) => {
+const Card = ({ dataPromise, setCartItems }) => {
   const [selectedItems, setSelectedItems] = useState([false]);
   const handleAddToCart = () => {
-    setCartItems([...cartItems, dataPromise]);
+    setCartItems((prev) => [...prev, dataPromise]);
     setSelectedItems(true);
   };
   return (

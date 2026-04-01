@@ -3,7 +3,7 @@ import Selected from "../Selected/Selected";
 import NotSelected from "../NotSelected/NotSelected";
 
 const Tools = ({ dataPromise }) => {
-  const [selectedItems, setSelectedItems] = useState([false]);
+  const [selectedItems, setSelectedItems] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   return (
     <>
@@ -29,7 +29,7 @@ const Tools = ({ dataPromise }) => {
             onClick={() => setSelectedItems(true)}
             className={`btn rounded-l-none rounded-r-2xl  ${selectedItems === true ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
           >
-            Cart (0)
+            Cart (cartItems.length)
           </button>
         </div>
 

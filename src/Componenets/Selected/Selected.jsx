@@ -11,7 +11,7 @@ const Selected = ({ cartItems = [], setCartItems }) => {
 
   if (cartItems.length === 0) {
     return (
-      <div>
+      <div className="items-center justify-center flex flex-col min-h-[60vh]">
         <img src={cartimg} alt="Cart" className="w-10 h-10 text-gray-400" />
         <p className="text-gray-400 text-sm">Your cart is empty</p>
       </div>
