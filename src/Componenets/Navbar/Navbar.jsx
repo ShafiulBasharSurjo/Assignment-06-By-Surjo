@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm px-6 md:px-16 lg:px-24">
       <div className="flex-1">
-        <a className=" text-xl bg-linear-to-r from-purple-600 to-blue-500 font-bold bg-clip-text text-transparent">
+        <a className=" text-3xl bg-linear-to-r from-purple-600 to-blue-500 font-bold bg-clip-text text-transparent">
           DigiTools
         </a>
       </div>

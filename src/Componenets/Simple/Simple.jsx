@@ -41,7 +41,7 @@ const Simple = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-purple-500 shrink-0"
+                    className="size-4 me-2 inline-block text-success"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -49,7 +49,7 @@ const Simple = () => {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -93,7 +93,7 @@ const Simple = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-white shrink-0"
+                    className="size-4 me-2 inline-block text-success"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -101,7 +101,7 @@ const Simple = () => {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -142,7 +142,7 @@ const Simple = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-purple-500 shrink-0"
+                    className="size-4 me-2 inline-block text-success"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -150,7 +150,7 @@ const Simple = () => {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>

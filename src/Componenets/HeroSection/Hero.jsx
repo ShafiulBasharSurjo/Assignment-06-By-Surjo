@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="absolute top-[-10%] right-[-5%] w-150 h-150 rounded-full bg-purple-300/20 blur-3xl pointer-events-none"></div>
 
         <div className="flex-1 max-w-130 z-10">
-          <div className="inline-flex items-center gap-2 text-xs text-linear-to-r from-purple-600 to-blue-500  border border-gray-200 rounded-full px-3 py-1.5 mb-6">
+          <div className="inline-flex items-center gap-2 text-xs bg-linear-to-r from-purple-600 to-blue-500  border border-gray-200 rounded-full px-3 py-1.5 mb-6 bg-clip-text text-transparent">
             <span className="w-2 h-2 rounded-full bg-linear-to-r from-purple-600 to-blue-500 inline-block"></span>
             New: AI-Powered Tools Available
           </div>
