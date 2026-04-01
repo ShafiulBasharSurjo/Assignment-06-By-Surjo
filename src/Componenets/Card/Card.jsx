@@ -58,7 +58,7 @@ const Card = ({ dataPromise, setCartItems }) => {
               </button>
             ) : (
               <button
-                className="btn btn-primary btn-block rounded-2xl"
+                className="btn bg-linear-to-r from-purple-600 to-blue-500 btn-block text-white rounded-2xl"
                 onClick={handleAddToCart}
               >
                 Subscribe

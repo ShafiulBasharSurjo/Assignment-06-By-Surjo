@@ -2,9 +2,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-6 md:px-16 lg:px-24">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className=" text-xl bg-linear-to-r from-purple-600 to-blue-500 font-bold bg-clip-text text-transparent">
+          DigiTools
+        </a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
@@ -30,7 +32,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="dropdown dropdown-end">
-          <button className="btn btn-active btn-primary">Get Started</button>
+          <button className="btn bg-linear-to-r from-purple-600 to-blue-500 text-white btn-sm rounded-full">
+            Get Started
+          </button>
         </div>
       </div>
     </div>

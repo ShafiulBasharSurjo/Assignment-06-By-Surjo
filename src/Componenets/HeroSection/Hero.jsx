@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="absolute top-[-10%] right-[-5%] w-150 h-150 rounded-full bg-purple-300/20 blur-3xl pointer-events-none"></div>
 
         <div className="flex-1 max-w-130 z-10">
-          <div className="inline-flex items-center gap-2 text-xs text-gray-500 border border-gray-200 rounded-full px-3 py-1.5 mb-6">
-            <span className="w-2 h-2 rounded-full bg-purple-500 inline-block"></span>
+          <div className="inline-flex items-center gap-2 text-xs text-linear-to-r from-purple-600 to-blue-500  border border-gray-200 rounded-full px-3 py-1.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-linear-to-r from-purple-600 to-blue-500 inline-block"></span>
             New: AI-Powered Tools Available
           </div>
 
@@ -29,16 +29,7 @@ const Hero = () => {
             <button className="text-sm font-semibold text-white bg-purple-600 hover:bg-purple-500 rounded-full px-6 py-3 shadow-lg shadow-purple-500/30 transition-all duration-200 hover:-translate-y-0.5">
               Explore Products
             </button>
-            <button className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-200 hover:border-purple-400 rounded-full px-5 py-3 transition-all duration-200 hover:-translate-y-0.5">
-              <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 10 12"
-                  className="w-2.5 fill-gray-700"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0L10 6L0 12V0Z" />
-                </svg>
-              </div>
+            <button className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-200 hover:bg-linear-to-r from-purple-600 to-blue-500 rounded-full px-5 py-3 transition-all duration-200 hover:-translate-y-0.5">
               Watch Demo
             </button>
           </div>
@@ -51,7 +42,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <div className="bg-[#7C3AED] px-[5%] py-8 flex flex-wrap items-center justify-around gap-6">
+      <div className="bg-linear-to-r from-purple-600 to-blue-500 text-white px-[5%] py-8 flex flex-wrap items-center justify-around gap-6">
         <div className="text-center text-white flex flex-col gap-1">
           <span className="font-syne font-extrabold text-4xl tracking-tight leading-none">
             50K+

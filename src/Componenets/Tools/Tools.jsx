@@ -29,7 +29,7 @@ const Tools = ({ dataPromise }) => {
             onClick={() => setSelectedItems(true)}
             className={`btn rounded-l-none rounded-r-2xl  ${selectedItems === true ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
           >
-            Cart (cartItems.length)
+            Cart {cartItems.length}
           </button>
         </div>
 
