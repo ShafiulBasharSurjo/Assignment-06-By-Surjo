@@ -1,10 +1,10 @@
-import React, { use, useState } from "react";
-import Card from "../Card/Card";
+import React, { useState } from "react";
 import Selected from "../Selected/Selected";
+import NotSelected from "../NotSelected/NotSelected";
 
 const Tools = ({ dataPromise }) => {
-  const allTools = use(dataPromise);
-  const [selectedItems, setSelectedItems] = useState(["notcart"]);
+  const [selectedItems, setSelectedItems] = useState([false]);
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
       <section className="bg-gray-100 py-20 px-[5%]">
@@ -20,27 +20,23 @@ const Tools = ({ dataPromise }) => {
 
         <div className="items-center justify-center flex mb-10">
           <button
-            onClick={() => setSelectedItems("notcart")}
-            className={`btn rounded-r-none rounded-l-2xl ${selectedItems === "notcart" ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
+            onClick={() => setSelectedItems(false)}
+            className={`btn rounded-r-none rounded-l-2xl ${selectedItems === false ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
           >
             Products
           </button>
           <button
-            onClick={() => setSelectedItems("cart")}
-            className={`btn rounded-l-none rounded-r-2xl  ${selectedItems === "cart" ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
+            onClick={() => setSelectedItems(true)}
+            className={`btn rounded-l-none rounded-r-2xl  ${selectedItems === true ? "bg-[#6107ec] text-white" : "bg-gray-200 text-gray-700"}`}
           >
             Cart (0)
           </button>
         </div>
 
-        {selectedItems === "cart" ? (
-          <Selected />
+        {selectedItems === true ? (
+          <Selected cartItems={cartItems} setCartItems={setCartItems} />
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {allTools.map((dataPromise) => (
-              <Card key={dataPromise.id} dataPromise={dataPromise} />
-            ))}
-          </div>
+          <NotSelected dataPromise={dataPromise} setCartItems={setCartItems} />
         )}
       </section>
     </>

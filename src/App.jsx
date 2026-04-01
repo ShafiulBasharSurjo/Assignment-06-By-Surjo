@@ -3,6 +3,7 @@ import "./App.css";
 import Hero from "./Componenets/HeroSection/Hero";
 import Navbar from "./Componenets/Navbar/Navbar";
 import Tools from "./Componenets/Tools/Tools";
+import Rest from "./Componenets/lowerpart/Rest";
 
 const fetchData = async () => {
   const res = await fetch("/data.json");
@@ -20,6 +21,7 @@ function App() {
       >
         <Tools dataPromise={dataPromise} />
       </Suspense>
+      <Rest />
     </>
   );
 }

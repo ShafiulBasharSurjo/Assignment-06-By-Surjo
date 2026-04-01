@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Card = ({ dataPromise }) => {
+const Card = ({ dataPromise, cartItems, setCartItems }) => {
+  const [selectedItems, setSelectedItems] = useState([false]);
+  const handleAddToCart = () => {
+    setCartItems([...cartItems, dataPromise]);
+    setSelectedItems(true);
+  };
   return (
     <>
       <div className="card w-96 bg-base-100 shadow-sm rounded-2xl">
@@ -46,10 +51,19 @@ const Card = ({ dataPromise }) => {
               </li>
             ))}
           </ul>
-          <div className="mt-6">
-            <button className="btn btn-primary btn-block rounded-2xl">
-              Subscribe
-            </button>
+          <div className="mt-6" onClick={() => setSelectedItems(true)}>
+            {selectedItems === true ? (
+              <button className="btn btn-success btn-block rounded-2xl">
+                Added to Cart
+              </button>
+            ) : (
+              <button
+                className="btn btn-primary btn-block rounded-2xl"
+                onClick={handleAddToCart}
+              >
+                Subscribe
+              </button>
+            )}
           </div>
         </div>
       </div>
