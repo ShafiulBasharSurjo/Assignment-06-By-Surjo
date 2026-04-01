@@ -19,19 +19,6 @@ const Rest = () => {
               01
             </span>
             <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-7 h-7 text-purple-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
               </svg>
             </div>
             <h3 className="font-syne font-bold text-lg text-gray-900 mb-2">
